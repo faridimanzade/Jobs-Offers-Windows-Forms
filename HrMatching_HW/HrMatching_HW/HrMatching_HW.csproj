@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C206535B-C87B-4777-A04A-1E2BBC40D98B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HrMatching_HW</RootNamespace>
+    <AssemblyName>HrMatching_HW</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbContexts\HrMatchingContext.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4AllVacancies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4AllVacancies.Designer.cs">
+      <DependentUpon>Form4AllVacancies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4AppliedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4AppliedList.Designer.cs">
+      <DependentUpon>Form4AppliedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4CV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4CV.Designer.cs">
+      <DependentUpon>Form4CV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4MostSuitable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4MostSuitable.Designer.cs">
+      <DependentUpon>Form4MostSuitable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4SearchPerCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4SearchPerCategory.Designer.cs">
+      <DependentUpon>Form4SearchPerCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5AppliedWorkers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5AppliedWorkers.Designer.cs">
+      <DependentUpon>Form5AppliedWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5PostedVacancies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5PostedVacancies.Designer.cs">
+      <DependentUpon>Form5PostedVacancies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5SearchPerCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5SearchPerCategory.Designer.cs">
+      <DependentUpon>Form5SearchPerCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5Vacancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5Vacancy.Designer.cs">
+      <DependentUpon>Form5Vacancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007131623508_createDB.cs" />
+    <Compile Include="Migrations\202007131623508_createDB.designer.cs">
+      <DependentUpon>202007131623508_createDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\CV.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Vacancy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4AllVacancies.resx">
+      <DependentUpon>Form4AllVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4AppliedList.resx">
+      <DependentUpon>Form4AppliedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4CV.resx">
+      <DependentUpon>Form4CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4MostSuitable.resx">
+      <DependentUpon>Form4MostSuitable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4SearchPerCategory.resx">
+      <DependentUpon>Form4SearchPerCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5AppliedWorkers.resx">
+      <DependentUpon>Form5AppliedWorkers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5PostedVacancies.resx">
+      <DependentUpon>Form5PostedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5SearchPerCategory.resx">
+      <DependentUpon>Form5SearchPerCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5Vacancy.resx">
+      <DependentUpon>Form5Vacancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131623508_createDB.resx">
+      <DependentUpon>202007131623508_createDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
