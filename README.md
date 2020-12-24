@@ -1,4 +1,4 @@
-# Jobs-Offers-Windows-Forms
+# Vacancies-Applicants-Windows-Forms
 
 This Desktop application written in ***Windows Forms*** allows human resources specialists to advertise new job offers, and applicants to apply for them
 
